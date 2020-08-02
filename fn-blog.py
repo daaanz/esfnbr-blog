@@ -31,7 +31,10 @@ while 1:
                 print('Error al publicar en Twitter.')
         except:
             print('No se ha detectado alguna de las variables.')
-
+    else:
+        print('No se detectan cambios, buscando de nuevo en 30 segundos...')
+    
+    time.sleep(setDelay)
 
 
 
