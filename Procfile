@@ -1,1 +1,1 @@
-worker: python fn-status.py
+worker: python fn-blog.py

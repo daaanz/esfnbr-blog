@@ -1,2 +1,2 @@
-# esfnbr-fn-status
-Fortnite server status.
+# esfnbr-blog
+Fortnite blog.
