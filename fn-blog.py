@@ -18,15 +18,16 @@ blogArticle = res['blogList'][1]
 while 1:
     resNew = requests.get(url).json()
     articleNew = res['blogList'][1]
-    if articleNew != blogArticle:
+    if resNew != res:
         try:
-            title = blogArticle['title']
-            description = blogArticle['short']
-            link = blogArticle['urlPattern']
+            print('Cambios detectados.')
+            title = articleNew['title']
+            description = articleNew['short']
+            link = articleNew['urlPattern']
             try:
                 api.update_status(title + '\n\n' + description + '\n' + 'https://www.epicgames.com/fortnite/' + link)
                 print('Se ha publicado en Twitter (esfnbr) ' + title)
-                blogArticle = resNew['blogList'][1]
+                resNew = requests.get(url).json()
             except:
                 print('Error al publicar en Twitter.')
         except:
