@@ -13,11 +13,11 @@ url = 'https://www.epicgames.com/fortnite/api/blog/getPosts?category=&postsPerPa
 setDelay = 30
 
 res = requests.get(url).json()
-blogArticle = res['blogList'][1]
+blogArticle = res['blogList'][2]
 
 while 1:
     resNew = requests.get(url).json()
-    articleNew = res['blogList'][1]
+    articleNew = res['blogList'][2]
     if resNew != res:
         try:
             print('Cambios detectados.')
